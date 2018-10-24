@@ -3,11 +3,12 @@
 <script src="https://unpkg.com/vue@2.5.17"></script>
 
 <div id="app">
+  <p>{{ msg }}</p>
 </div>
 
 <script>
   new Vue({
-    template: '<p>{{msg}}</p>',
+    el: '#app',
     data: { msg: 'Hello world' }
-  }).$mount('#app')
+  });
 </script>
