@@ -3,7 +3,8 @@
 <script src="https://unpkg.com/vue@2.5.17"></script>
 
 <div id="app">
-  <p>{{ items[0].name }}</p>
+  <p>{{ items[0].name }}: {{ items[0].price }} x {{ items[0].quantity }}</p>
+  <p>フィルタ処理例 {{1000 | numberWithDelimiter}}</p>
 </div>
 <button id="b-button" v-bind:title="loggedInButton" v-bind:disabled="!canBuy">購入</button>
 
