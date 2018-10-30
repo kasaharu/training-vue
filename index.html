@@ -4,8 +4,8 @@
 
 <div id="app">
   <p>{{ items[0].name }}: {{ items[0].price }} x {{ items[0].quantity }}</p>
-  <p>フィルタ処理例 {{1000 | numberWithDelimiter}}</p>
-  <p>合計: {{ totalPrice }}</p>
+  <p>小計: {{ totalPrice | numberWithDelimiter }}</p>
+  <p>合計(税込): {{ totalPriceWithTax | numberWithDelimiter }}</p>
 </div>
 <button id="b-button" v-bind:title="loggedInButton" v-bind:disabled="!canBuy">購入</button>
 
