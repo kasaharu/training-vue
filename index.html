@@ -6,7 +6,7 @@
   <div :style="errorMessageStyle">
     <ul>
       <li v-for="item in items" v-bind:key="item.name">
-        {{ item.name }} の個数: <input type="number" v-on:input="item.quantity = $event.target.value" min="0">
+        {{ item.name }} の個数: <input type="number" v-on:input="item.quantity = $event.target.value" v-bind:value="item.quantity" min="0">
         {{ item.name }}: {{ item.price }} x {{ item.quantity }} = {{ item.price * item.quantity | numberWithDelimiter }}円
       </li>
     </ul>
