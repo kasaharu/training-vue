@@ -9,6 +9,15 @@ var vm = new Vue({
   data: {
     items: items,
   },
+  created: function() {
+    console.log('created');
+  },
+  mounted: function() {
+    console.log('mounted');
+  },
+  beforeDestroy: function() {
+    console.log('beforeDestroy');
+  },
   filters: {
     numberWithDelimiter: function(value) {
       if (!value) { return '0'; }
