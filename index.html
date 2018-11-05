@@ -24,6 +24,6 @@
     </p>
   </div>
 </div>
-<button id="b-button" v-bind:title="loggedInButton" v-bind:disabled="!canBuy">購入</button>
+<button id="b-button" v-bind:title="loggedInButton" v-bind:disabled="!canBuy" v-on:click="doBuy($event)">購入</button>
 
 <script src="app.js"></script>
