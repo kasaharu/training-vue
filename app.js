@@ -4,6 +4,10 @@ var items = [
   { name: '消しゴム', price: 500, quantity: 0 },
 ];
 
+Vue.component('list-item', {
+  template: '<li>foo</li>'
+});
+
 var vm = new Vue({
   el: '#app',
   data: {
