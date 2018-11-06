@@ -24,6 +24,15 @@ var vm = new Vue({
       return value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,');
     }
   },
+  methods: {
+    doBuy: function(event) {
+      console.log(event);
+      alert(this.totalPriceWithTax + '円のお買い上げ！');
+      this.items.forEach(function(item) {
+        item.quantity = 0;
+      });
+    }
+  },
   computed: {
     totalPrice: function() {
       return this.items.reduce(function(sum, item) {
