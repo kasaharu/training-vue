@@ -61,16 +61,3 @@ vm.$watch(function() {
 }, function(quantity) {
   console.log(quantity);
 });
-
-var vm2 = new Vue({
-  el: '#b-button',
-  data: {
-    canBuy: true,
-    loggedInButton: 'ログイン済みのため購入できます',
-  },
-  methods: {
-    doBuy: function(event) {
-      console.log(event);
-    }
-  }
-});
