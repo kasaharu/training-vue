@@ -5,7 +5,10 @@ var items = [
 ];
 
 Vue.component('list-item', {
-  template: '<li>foo</li>'
+  template: '<li>foo {{ contents }}</li>',
+  data: function() {
+    return { contents: 'bar' };
+  }
 });
 
 var vm = new Vue({
