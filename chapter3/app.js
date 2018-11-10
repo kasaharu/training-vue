@@ -6,6 +6,16 @@ Vue.component('fruits-list-description', {
   template: '<p>季節の代表的なフルーツの一覧です</p>',
 });
 
+Vue.component('fruits-list', {
+  template: `
+    <div>
+      <fruits-list-title></fruits-list-title>
+      <fruits-list-description></fruits-list-description>
+      <fruits-list-table></fruits-list-table>
+    </div>
+  `,
+});
+
 Vue.component('fruits-list-table', {
   template: `
     <table>
@@ -34,5 +44,5 @@ Vue.component('fruits-list-table', {
 });
 
 new Vue({
-  el: '#fruits-list',
+  el: '#main',
 });
