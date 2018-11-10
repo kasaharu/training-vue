@@ -1,6 +1,8 @@
-Vue.component('fruits-list-title', {
+var FruitsListTitle = Vue.extend({
   template: '<h1>フルーツ一覧</h1>',
 });
+
+Vue.component('fruits-list-title', FruitsListTitle);
 
 Vue.component('fruits-list-description', {
   template: '<p>季節の代表的なフルーツの一覧です</p>',
