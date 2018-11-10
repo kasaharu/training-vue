@@ -2,23 +2,11 @@ var FruitsListTitle = Vue.extend({
   template: '<h1>フルーツ一覧</h1>',
 });
 
-Vue.component('fruits-list-title', FruitsListTitle);
-
-Vue.component('fruits-list-description', {
+var FruitsListDescription = Vue.extend({
   template: '<p>季節の代表的なフルーツの一覧です</p>',
 });
 
-Vue.component('fruits-list', {
-  template: `
-    <div>
-      <fruits-list-title></fruits-list-title>
-      <fruits-list-description></fruits-list-description>
-      <fruits-list-table></fruits-list-table>
-    </div>
-  `,
-});
-
-Vue.component('fruits-list-table', {
+var FruitsListTable = Vue.extend({
   template: `
     <table>
       <tr>
@@ -44,6 +32,21 @@ Vue.component('fruits-list-table', {
     </table>
   `,
 });
+
+var FruitsList = Vue.extend({
+  template: `
+    <div>
+      <fruits-list-title></fruits-list-title>
+      <fruits-list-description></fruits-list-description>
+      <fruits-list-table></fruits-list-table>
+    </div>
+  `,
+});
+
+Vue.component('fruits-list-title', FruitsListTitle);
+Vue.component('fruits-list-description', FruitsListDescription);
+Vue.component('fruits-list-table', FruitsListTable);
+Vue.component('fruits-list', FruitsList);
 
 new Vue({
   el: '#main',
