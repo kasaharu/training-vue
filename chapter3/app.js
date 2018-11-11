@@ -46,8 +46,10 @@ var FruitsList = Vue.extend({
 Vue.component('fruits-list-title', FruitsListTitle);
 Vue.component('fruits-list-description', FruitsListDescription);
 Vue.component('fruits-list-table', FruitsListTable);
-Vue.component('fruits-list', FruitsList);
 
 new Vue({
   el: '#main',
+  components: {
+    'fruits-list': FruitsList,
+  },
 });
