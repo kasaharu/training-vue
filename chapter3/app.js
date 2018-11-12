@@ -61,9 +61,19 @@ Vue.component('input-date-with-today', {
   }
 });
 
+Vue.component('item-desc', {
+  props: {
+    itemName: {
+      type: String,
+    },
+  },
+  template: '<p>{{ itemName }}は便利です。</p>',
+});
+
 new Vue({
   el: '#main',
   components: {
     'fruits-list': FruitsList,
   },
+  data: { myItem: 'pen' },
 });
