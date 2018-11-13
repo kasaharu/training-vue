@@ -9,6 +9,10 @@
 </div>
 
 <div id="fruits-component">
+  <ol>
+    <fruits-item-name v-for="fruit in fruitsItems" :key="fruit.name" :fruits-item="fruit">
+    </fruits-item-name>
+  </ol>
 </div>
 
 <script src="app.js"></script>
