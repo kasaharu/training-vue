@@ -77,3 +77,9 @@ new Vue({
   },
   data: { myItem: 'pen' },
 });
+
+new Vue({
+  el: '#fruits-component',
+  data: {
+  },
+});
