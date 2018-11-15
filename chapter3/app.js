@@ -119,9 +119,15 @@ new Vue({
     'counter-button': counterButton,
   },
   data: {
+    total: 0,
     fruits: [
       { name: '梨' },
       { name: 'イチゴ' },
     ],
+  },
+  methods: {
+    incrementCartStatus: function() {
+      this.total += 1;
+    }
   },
 });

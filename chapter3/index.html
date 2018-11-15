@@ -17,8 +17,9 @@
 
 <div id="fruits-counter">
   <div v-for="fruit in fruits">
-    {{fruit.name}}: <counter-button></counter-button>
+    {{fruit.name}}: <counter-button v-on:increment="incrementCartStatus()"></counter-button>
   </div>
+  <p>合計: {{total}}</p>
 </div>
 
 <script src="app.js"></script>
