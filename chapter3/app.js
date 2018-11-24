@@ -133,13 +133,13 @@ new Vue({
 });
 
 var headerTemplate = `
-  <div>
+  <div class="header">
     <slot name="header">No title</slot>
   </div>
 `;
 
 var contentTemplate = `
-  <div>
+  <div class="content">
     <slot name="content">No contents</slot>
   </div>
 `;
